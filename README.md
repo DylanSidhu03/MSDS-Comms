@@ -25,18 +25,25 @@ df = pd.DataFrame({
     "costs":    [200, 220, 180, 140],
 })
 
-# Single-series bar (with direct value labels)
-pv.bar(df, "category", "sales", title="Sales by Category")
+# Single-series bar: rounded bars + direct value labels
+pv.bar(df, "category", "sales",
+       title="Sales by Category",
+       subtitle="Quarterly revenue across product lines",
+       ylabel="USD (thousands)",
+       caption="Source: internal demo data")
 
-# Grouped bars
+# Grouped bars (top-left horizontal legend), or horizontal=True
 pv.bar(df, "category", ["sales", "costs"], title="Sales vs Costs")
 
-# Line chart with one or more series
+# Line chart; single series gets a soft area fill, markers are ringed
 pv.line(df, ["sales", "costs"], x="category", title="Trend")
 
-# Histogram from a Series or a DataFrame column
+# Histogram with an annotated mean line
 pv.hist(df, "sales", bins=20, title="Distribution of Sales")
 ```
+
+Every chart supports `title`, `subtitle`, and `caption` for a clean text
+hierarchy, plus `xlabel`, `ylabel`, `color`, `figsize`, and `ax`.
 
 Every function returns the matplotlib `Axes`, so you can tweak it or save it:
 
@@ -47,17 +54,22 @@ ax.figure.savefig("sales.png", dpi=150)
 
 ## API
 
-| Function | Purpose |
-|----------|---------|
-| `bar(df, x, y, ...)`   | Vertical or `horizontal=True` bars; `y` can be a list for grouped bars. |
-| `line(df, y, x=None, ...)` | One or more overlaid line series. |
-| `hist(data, column=None, ...)` | Distribution of a Series or a DataFrame column. |
+| Function | Purpose | Notable options |
+|----------|---------|-----------------|
+| `bar(df, x, y, ...)`   | Vertical or horizontal bars; `y` can be a list for grouped bars. | `horizontal`, `value_labels`, `rounded` |
+| `line(df, y, x=None, ...)` | One or more overlaid line series. | `markers`, `area` |
+| `hist(data, column=None, ...)` | Distribution of a Series or a DataFrame column. | `bins`, `mean_line`, `rounded` |
 
-Common keyword arguments: `title`, `xlabel`, `ylabel`, `color`, `figsize`, and
-`ax` (to draw into an existing subplot).
+All three also accept `title`, `subtitle`, `caption`, `xlabel`, `ylabel`,
+`color`, `figsize`, and `ax` (to draw into an existing subplot).
 
 ## Styling
 
-Charts use a fixed, colorblind-safe categorical palette, hairline gridlines,
-no top/right borders, and a legend only when there is more than one series —
-so a set of charts reads as one consistent system.
+Charts share one deliberate look so a set of them reads as a single system:
+
+- A fixed, **colorblind-safe** categorical palette applied in a set order.
+- **Softly rounded** bars, ringed line markers, and an optional area fill.
+- A clean **title / subtitle / caption** hierarchy in a system sans-serif.
+- Hairline gridlines, a single baseline (no boxed-in axes), thousands-separated
+  ticks, and a subtle page-vs-plot background for depth.
+- A legend only when there is more than one series.
