@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pandaviz"
+version = "0.1.0"
+description = "Better-looking bar, line, and histogram charts on top of pandas."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Dylan Sidhu" }]
+keywords = ["pandas", "visualization", "charts", "plotting", "matplotlib"]
+dependencies = [
+    "pandas",
+    "matplotlib",
+]
+
+[project.urls]
+Homepage = "https://github.com/DylanSidhu03/MSDS-Comms"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pandaviz"]
