@@ -63,29 +63,13 @@ ax.figure.savefig("sales.png", dpi=150)
 All three also accept `title`, `subtitle`, `caption`, `xlabel`, `ylabel`,
 `color`, `figsize`, and `ax` (to draw into an existing subplot).
 
-## Van Gogh theme 🎨
-
-For an expressive, painterly alternative, `pandaviz.vangogh` renders the same
-three charts in the style of Van Gogh's *Starry Night* — a swirling, textured
-night sky, impasto brushstrokes, and a glowing chrome-yellow/cobalt palette:
-
-```python
-from pandaviz import vangogh as vg
-
-vg.bar(df, "category", "sales", title="Sales by Category")
-vg.line(ts, ["revenue", "expenses"], x="month", title="Revenue vs Expenses")
-vg.hist(df, "score", bins=22, title="Distribution of Scores")
-```
-
-Same `title` / `subtitle` / `caption` / `ax` interface as the default charts.
-
 ## Styling
 
-The default charts share one deliberate look so a set of them reads as a single system:
+Charts share one deliberate, modern look so a set of them reads as a single system:
 
-- A fixed, **colorblind-safe** categorical palette applied in a set order.
+- A cohesive **blue-grey** palette applied in a set order.
 - **Softly rounded** bars, ringed line markers, and an optional area fill.
-- A clean **title / subtitle / caption** hierarchy in a system sans-serif.
+- A clean **title / subtitle / caption** hierarchy in a modern sans-serif.
 - Hairline gridlines, a single baseline (no boxed-in axes), thousands-separated
-  ticks, and a subtle page-vs-plot background for depth.
+  ticks, and a crisp white plot area on a soft cool-grey page.
 - A legend only when there is more than one series.

@@ -5,13 +5,14 @@ from matplotlib import font_manager
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import FuncFormatter
 
-PALETTE = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100",
-           "#e87ba4", "#008300", "#4a3aa7", "#e34948"]
-INK, SECONDARY, MUTED = "#0b0b0b", "#52514e", "#898781"
-GRID, BASELINE, SURFACE, PAGE = "#e6e5df", "#c3c2b7", "#fcfcfb", "#f4f3ef"
+# A cohesive, modern blue-grey palette (ordered for separation by lightness/hue).
+PALETTE = ["#3b6ea5", "#8aa9c4", "#4c7d75", "#5a6b7d",
+           "#26415e", "#a7b4c0", "#6d8fb3", "#33505f"]
+INK, SECONDARY, MUTED = "#1e2a35", "#55677a", "#9aa7b3"
+GRID, BASELINE, SURFACE, PAGE = "#e8edf2", "#cdd7e0", "#ffffff", "#eef2f6"
 _AVAIL = {f.name for f in font_manager.fontManager.ttflist}
-FONT = next((f for f in ("Helvetica Neue", "Helvetica", "Arial", "Segoe UI",
-                          "DejaVu Sans") if f in _AVAIL), "sans-serif")
+FONT = next((f for f in ("Inter", "Helvetica Neue", "Helvetica", "Arial",
+                         "Segoe UI", "DejaVu Sans") if f in _AVAIL), "sans-serif")
 
 
 def _fmt(v):

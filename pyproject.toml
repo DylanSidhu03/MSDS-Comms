@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pandaviz"
-version = "0.2.0"
+version = "0.3.0"
 description = "Better-looking bar, line, and histogram charts on top of pandas."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -14,7 +14,6 @@ keywords = ["pandas", "visualization", "charts", "plotting", "matplotlib"]
 dependencies = [
     "pandas",
     "matplotlib",
-    "numpy",
 ]
 
 [project.urls]
