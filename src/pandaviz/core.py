@@ -5,10 +5,10 @@ from matplotlib import font_manager
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import FuncFormatter
 
-# Faded "Sage & Slate" palette: soft mint/sage greens stepped against slate greys,
-# ordered so series stay distinguishable by lightness within the mint-grey tone.
-PALETTE = ["#7fa898", "#abc3b7", "#5c6b6a", "#3d5c52",
-           "#bcc4c2", "#93a8a0", "#6e837c", "#c9d2ce"]
+# Faded "Sage & Slate" palette: a deeper primary sage with pale-mint and deep-pine
+# greens spread wide in lightness for contrast, stepped against slate greys.
+PALETTE = ["#5e9280", "#b7d3c7", "#5c6b6a", "#2f5147",
+           "#bcc4c2", "#93a29b", "#6e837c", "#c9d2ce"]
 INK, SECONDARY, MUTED = "#333b39", "#63706c", "#9aa4a0"
 GRID, BASELINE, SURFACE, PAGE = "#e9ecea", "#ced4d1", "#fbfcfc", "#eef1ef"
 _AVAIL = {f.name for f in font_manager.fontManager.ttflist}
