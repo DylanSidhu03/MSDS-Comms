@@ -5,12 +5,12 @@ from matplotlib import font_manager
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import FuncFormatter
 
-# Blue-led, modern palette ordered for separation; validated colorblind-safe
-# (worst adjacent CVD ΔE 9.6, normal-vision 18.3) so series read distinctly.
-PALETTE = ["#2e6db4", "#e2743b", "#1f9e89", "#e0a52e",
-           "#c94f88", "#6b4fa8", "#4aa3d6", "#d13b3b"]
-INK, SECONDARY, MUTED = "#1e2a35", "#55677a", "#9aa7b3"
-GRID, BASELINE, SURFACE, PAGE = "#e8edf2", "#cdd7e0", "#ffffff", "#eef2f6"
+# Faded "Sage & Slate" palette: soft mint/sage greens stepped against slate greys,
+# ordered so series stay distinguishable by lightness within the mint-grey tone.
+PALETTE = ["#7fa898", "#abc3b7", "#5c6b6a", "#3d5c52",
+           "#bcc4c2", "#93a8a0", "#6e837c", "#c9d2ce"]
+INK, SECONDARY, MUTED = "#333b39", "#63706c", "#9aa4a0"
+GRID, BASELINE, SURFACE, PAGE = "#e9ecea", "#ced4d1", "#fbfcfc", "#eef1ef"
 _AVAIL = {f.name for f in font_manager.fontManager.ttflist}
 FONT = next((f for f in ("Inter", "Helvetica Neue", "Helvetica", "Arial",
                          "Segoe UI", "DejaVu Sans") if f in _AVAIL), "sans-serif")

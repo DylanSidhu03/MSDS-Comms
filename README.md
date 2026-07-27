@@ -67,8 +67,8 @@ All three also accept `title`, `subtitle`, `caption`, `xlabel`, `ylabel`,
 
 Charts share one deliberate, modern look so a set of them reads as a single system:
 
-- A blue-led, **colorblind-safe** palette applied in a set order, so series
-  stay clearly distinct while single-series charts keep the steel-blue tone.
+- A faded **"Sage & Slate"** palette — soft mint/sage greens stepped against
+  slate greys — applied in a set order so series stay distinguishable.
 - **Softly rounded** bars, ringed line markers, and an optional area fill.
 - A clean **title / subtitle / caption** hierarchy in a modern sans-serif.
 - Hairline gridlines, a single baseline (no boxed-in axes), thousands-separated
