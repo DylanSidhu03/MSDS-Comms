@@ -5,12 +5,12 @@ from matplotlib import font_manager
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import FuncFormatter
 
-# Faded "Sage & Slate" palette: a deeper primary sage with pale-mint and deep-pine
-# greens spread wide in lightness for contrast, stepped against slate greys.
-PALETTE = ["#5e9280", "#b7d3c7", "#5c6b6a", "#2f5147",
-           "#bcc4c2", "#93a29b", "#6e837c", "#c9d2ce"]
-INK, SECONDARY, MUTED = "#333b39", "#63706c", "#9aa4a0"
-GRID, BASELINE, SURFACE, PAGE = "#e9ecea", "#ced4d1", "#fbfcfc", "#eef1ef"
+# Earthy "Sage, Stone & Clay" palette: the three mains are a sage green, a light
+# washed brown, and a slate grey, backed by deeper green/brown/grey earth tones.
+PALETTE = ["#5e8f77", "#c8b79f", "#5c6b6a", "#2f5147",
+           "#9c8468", "#bcc4c2", "#8a9e95", "#ded3c2"]
+INK, SECONDARY, MUTED = "#363330", "#6b655c", "#a09a8f"
+GRID, BASELINE, SURFACE, PAGE = "#eae7e0", "#d4cfc4", "#fcfbf8", "#f1eee7"
 _AVAIL = {f.name for f in font_manager.fontManager.ttflist}
 FONT = next((f for f in ("Inter", "Helvetica Neue", "Helvetica", "Arial",
                          "Segoe UI", "DejaVu Sans") if f in _AVAIL), "sans-serif")
