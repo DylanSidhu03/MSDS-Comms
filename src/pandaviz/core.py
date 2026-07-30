@@ -5,10 +5,10 @@ from matplotlib import font_manager
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import FuncFormatter
 
-# Earthy "Sage, Stone & Clay" palette: the three mains are a sage green, a light
-# washed brown, and a slate grey, backed by deeper green/brown/grey earth tones.
-PALETTE = ["#5e8f77", "#c8b79f", "#5c6b6a", "#2f5147",
-           "#9c8468", "#bcc4c2", "#8a9e95", "#ded3c2"]
+# Earthy "Sage, Stone & Clay" palette: sage green, light washed brown, and slate
+# grey lead, with a dark clay brown fourth, then deeper green/grey earth tones.
+PALETTE = ["#5e8f77", "#c8b79f", "#5c6b6a", "#9c8460",
+           "#2f5147", "#bcc4c2", "#8a9e95", "#ded3c2"]
 INK, SECONDARY, MUTED = "#363330", "#6b655c", "#a09a8f"
 GRID, BASELINE, SURFACE, PAGE = "#eae7e0", "#d4cfc4", "#fcfbf8", "#f1eee7"
 _AVAIL = {f.name for f in font_manager.fontManager.ttflist}
