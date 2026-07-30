@@ -5,9 +5,9 @@ from matplotlib import font_manager
 from matplotlib.patches import FancyBboxPatch
 from matplotlib.ticker import FuncFormatter
 
-# Earthy "Sage, Stone & Clay" palette: sage green, light washed brown, and slate
-# grey lead, with a dark clay brown fourth, then deeper green/grey earth tones.
-PALETTE = ["#5e8f77", "#c8b79f", "#5c6b6a", "#9c8460",
+# Earthy "Sage, Stone & Clay" palette: sage green, light washed brown, and a
+# soft slate grey lead, with a dark mocha brown fourth, then deeper earth tones.
+PALETTE = ["#5e8f77", "#c8b79f", "#79837f", "#8f7550",
            "#2f5147", "#bcc4c2", "#8a9e95", "#ded3c2"]
 INK, SECONDARY, MUTED = "#363330", "#6b655c", "#a09a8f"
 GRID, BASELINE, SURFACE, PAGE = "#eae7e0", "#d4cfc4", "#fcfbf8", "#f1eee7"
