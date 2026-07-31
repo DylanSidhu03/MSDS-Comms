@@ -1,4 +1,4 @@
-# pandaviz
+# simpleviz-dgsidhu
 
 Better-looking bar, line, and histogram charts on top of pandas — a small,
 opinionated styling layer so your plots look clean without fussing over
@@ -7,8 +7,10 @@ matplotlib defaults.
 ## Install
 
 ```bash
-pip install -e .
+pip install simpleviz-dgsidhu
 ```
+
+Or from source: `pip install -e .`
 
 > **Dependencies:** `pandas` for data and `matplotlib` for rendering. Charts are
 > drawn on a matplotlib `Axes`, so you can keep customizing after the fact.
@@ -17,7 +19,7 @@ pip install -e .
 
 ```python
 import pandas as pd
-import pandaviz as pv
+import simpleviz_dgsidhu as pv
 
 df = pd.DataFrame({
     "category": ["Alpha", "Beta", "Gamma", "Delta"],
