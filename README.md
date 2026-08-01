@@ -14,6 +14,9 @@ Or from source: `pip install -e .`
 
 > **Dependencies:** `pandas` for data and `matplotlib` for rendering. Charts are
 > drawn on a matplotlib `Axes`, so you can keep customizing after the fact.
+>
+> **In Jupyter, charts display automatically** — importing the package turns on
+> inline plotting for you, so you never need `%matplotlib inline` or `plt.show()`.
 
 ## Usage
 
