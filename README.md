@@ -75,5 +75,27 @@ Charts share one deliberate, modern look so a set of them reads as a single syst
 - **Softly rounded** bars, ringed line markers, and an optional area fill.
 - A clean **title / subtitle / caption** hierarchy in a modern sans-serif.
 - Hairline gridlines, a single baseline (no boxed-in axes), thousands-separated
-  ticks, and a crisp white plot area on a soft cool-grey page.
+  ticks, and a warm near-white plot area on a soft sand-toned page.
 - A legend only when there is more than one series.
+
+## Development & publishing
+
+Always work inside a virtual environment so you never disturb the package
+versions your other tools (Streamlit, Sphinx, etc.) depend on:
+
+```bash
+python -m venv venv
+source venv/bin/activate          # Windows: venv\Scripts\activate
+pip install -e .                  # editable install for local development
+```
+
+To build and publish a release to PyPI (needs a PyPI account + API token):
+
+```bash
+pip install build twine
+python -m build                   # creates dist/*.whl and dist/*.tar.gz
+twine upload dist/*               # username: __token__   password: your pypi-… token
+```
+
+Bump the `version` in both `pyproject.toml` and `src/simpleviz_dgsidhu/__init__.py`
+before each upload — PyPI will not accept a version that already exists.
