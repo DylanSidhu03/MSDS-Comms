@@ -19,7 +19,7 @@ Or from source: `pip install -e .`
 
 ```python
 import pandas as pd
-import simpleviz_dgsidhu as pv
+import simpleviz_dgsidhu as sv
 
 df = pd.DataFrame({
     "category": ["Alpha", "Beta", "Gamma", "Delta"],
@@ -28,20 +28,20 @@ df = pd.DataFrame({
 })
 
 # Single-series bar: rounded bars + direct value labels
-pv.bar(df, "category", "sales",
+sv.bar(df, "category", "sales",
        title="Sales by Category",
        subtitle="Quarterly revenue across product lines",
        ylabel="USD (thousands)",
        caption="Source: internal demo data")
 
 # Grouped bars (top-left horizontal legend), or horizontal=True
-pv.bar(df, "category", ["sales", "costs"], title="Sales vs Costs")
+sv.bar(df, "category", ["sales", "costs"], title="Sales vs Costs")
 
 # Line chart; single series gets a soft area fill, markers are ringed
-pv.line(df, ["sales", "costs"], x="category", title="Trend")
+sv.line(df, ["sales", "costs"], x="category", title="Trend")
 
 # Histogram with an annotated mean line
-pv.hist(df, "sales", bins=20, title="Distribution of Sales")
+sv.hist(df, "sales", bins=20, title="Distribution of Sales")
 ```
 
 Every chart supports `title`, `subtitle`, and `caption` for a clean text
@@ -50,7 +50,7 @@ hierarchy, plus `xlabel`, `ylabel`, `color`, `figsize`, and `ax`.
 Every function returns the matplotlib `Axes`, so you can tweak it or save it:
 
 ```python
-ax = pv.bar(df, "category", "sales", title="Sales")
+ax = sv.bar(df, "category", "sales", title="Sales")
 ax.figure.savefig("sales.png", dpi=150)
 ```
 
